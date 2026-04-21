@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Hassan | Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- PARTICLES -->
+    <div class="particles" id="particles"></div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav id="navbar">
+      <div class="container">
+        <a href="#home" class="nav-logo">Portfolio<span>.</span></a>
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- text: headings drop from top · paragraph rises from bottom · button slides from right -->
+          <div class="hero-text">
+            <h3 class="reveal-top">Hello, It's Me</h3>
+            <h1 class="reveal-top delay-1">Ali Hassan</h1>
+            <p class="typed-line reveal-top delay-2">
+              And I'm a <span id="typed"></span>
+            </p>
+            <p class="reveal-bottom delay-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium, ab autem repellat reiciendis ipsam perspiciatis nemo
+              optio totam libero.
+            </p>
+            <div class="hero-socials stagger">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+            <a href="#" class="btn btn-primary reveal-right delay-3">
+              Download CV
+              <i class="fas fa-download" style="margin-left: 0.4rem"></i>
+            </a>
+          </div>
+
+          <!-- image: slides from left · 340×340 wrapper · img clipped inside hex (document style) -->
+          <div class="hero-img reveal-left delay-2">
+            <div class="hex-wrapper">
+              <svg
+                class="hex-bg"
+                viewBox="0 0 200 230"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  points="100,5 195,55 195,175 100,225 5,175 5,55"
+                  fill="none"
+                  stroke="#00d4ff"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+                alt="Ali Hassan"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="section-py">
+      <div class="container">
+        <div class="about-grid">
+          <!-- image: slides from left · 300×300 wrapper · img clipped inside hex (document style) -->
+          <div class="reveal-left">
+            <div class="hex-wrapper">
+              <svg
+                class="hex-bg"
+                viewBox="0 0 200 230"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  points="100,5 195,55 195,175 100,225 5,175 5,55"
+                  fill="none"
+                  stroke="#00d4ff"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+                alt="Ali Hassan About"
+              />
+            </div>
+          </div>
+
+          <!-- content: heading from top · text from bottom · button from right -->
+          <div class="about-content">
+            <h2 class="reveal-top">About <span>Me</span></h2>
+            <h3 class="reveal-top delay-1">Frontend Developer!</h3>
+            <p class="reveal-bottom delay-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              delectus iste, aliquid officia quasi aliquam deleniti consequuntur
+              suscipit ducimus tenetur maiores vel commodi veniam ratione! Nisi
+              praesentium delectus fugiat officiis cupiditate in illum, modi
+              unde recusandae, molestiae excepturi voluptatum temporibus.
+            </p>
+            <a href="#contact" class="btn btn-outline reveal-right delay-3">
+              Get In Touch
+              <i class="fas fa-arrow-right" style="margin-left: 0.4rem"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="section-py">
+      <div class="container">
+        <h2 class="section-title reveal-top">Our <span>Services</span></h2>
+        <div class="services-grid stagger">
+          <div class="service-card">
+            <i class="fas fa-code service-icon"></i>
+            <h3>Web Development</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+              quia voluptas nostrum? Dolore culpa eius possimus fugit
+              reprehenderit aperiam eveniet.
+            </p>
+            <a href="#" class="btn btn-outline">Read More</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-pen-nib service-icon"></i>
+            <h3>Graphic Design</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+              quia voluptas nostrum? Dolore culpa eius possimus fugit
+              reprehenderit aperiam eveniet.
+            </p>
+            <a href="#" class="btn btn-outline">Read More</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-chart-bar service-icon"></i>
+            <h3>Digital Marketing</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
+              quia voluptas nostrum? Dolore culpa eius possimus fugit
+              reprehenderit aperiam eveniet.
+            </p>
+            <a href="#" class="btn btn-outline">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO ==================== -->
+    <section id="portfolio" class="section-py">
+      <div class="container">
+        <h2 class="section-title reveal-top">Latest <span>Project</span></h2>
+        <div class="portfolio-grid stagger" id="portfolioGrid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="section-py">
+      <div class="container">
+        <h2 class="section-title reveal-top">Contact <span>Me!</span></h2>
+        <div class="contact-form reveal-bottom">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="Full Name" />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="tel" placeholder="Mobile Number" />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Email Subject" />
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom: 0">
+            <textarea placeholder="Your Message"></textarea>
+          </div>
+          <div class="form-submit">
+            <button class="btn btn-primary" onclick="handleContact(event)">
+              Send Message
+              <i class="fas fa-paper-plane" style="margin-left: 0.4rem"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <p>
+        © 2026 <span>Ali Hassan</span>. All Rights Reserved. Made with
+        <span>♥</span>
+      </p>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button
+      id="backTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Back to top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ==================== MODAL ==================== -->
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      onclick="closeModalOutside(event)"
+    >
+      <div class="modal-box" id="modalBox">
+        <button class="modal-close" onclick="closeModal()" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+        <img id="modalImg" class="modal-img" src="" alt="" />
+        <div class="modal-body">
+          <h2 id="modalTitle"></h2>
+          <div class="modal-tags" id="modalTags"></div>
+          <p id="modalDesc"></p>
+          <div class="modal-actions">
+            <a id="modalGithub" href="#" class="btn btn-outline" target="_blank"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+            <a id="modalDemo" href="#" class="btn btn-primary" target="_blank"
+              ><i class="fas fa-external-link-alt"></i> Live Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+  </body>
+</html>
