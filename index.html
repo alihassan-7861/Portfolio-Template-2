@@ -12,8 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+   
   </head>
   <body>
     <!-- PARTICLES -->
@@ -40,7 +39,7 @@
     <section id="home">
       <div class="container">
         <div class="hero-grid">
-          <!-- text: headings drop from top · paragraph rises from bottom · button slides from right -->
+          <!-- TEXT -->
           <div class="hero-text">
             <h3 class="reveal-top">Hello, It's Me</h3>
             <h1 class="reveal-top delay-1">Ali Hassan</h1>
@@ -72,9 +71,21 @@
             </a>
           </div>
 
-          <!-- image: slides from left · 340×340 wrapper · img clipped inside hex (document style) -->
+          <!-- HEX IMAGE -->
           <div class="hero-img reveal-left delay-2">
             <div class="hex-wrapper">
+              <!-- Filled dark-teal background polygon (matches reference: solid colour behind photo) -->
+              <svg
+                class="hex-fill"
+                viewBox="0 0 200 230"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  points="100,5 195,55 195,175 100,225 5,175 5,55"
+                  fill="#0a2a3a"
+                />
+              </svg>
+              <!-- Glowing outline stroke -->
               <svg
                 class="hex-bg"
                 viewBox="0 0 200 230"
@@ -84,10 +95,11 @@
                   points="100,5 195,55 195,175 100,225 5,175 5,55"
                   fill="none"
                   stroke="#00d4ff"
-                  stroke-width="3"
+                  stroke-width="3.5"
                   stroke-linejoin="round"
                 />
               </svg>
+              <!-- Photo clipped to hex shape -->
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
                 alt="Ali Hassan"
@@ -102,9 +114,18 @@
     <section id="about" class="section-py">
       <div class="container">
         <div class="about-grid">
-          <!-- image: slides from left · 300×300 wrapper · img clipped inside hex (document style) -->
           <div class="reveal-left">
             <div class="hex-wrapper">
+              <svg
+                class="hex-fill"
+                viewBox="0 0 200 230"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  points="100,5 195,55 195,175 100,225 5,175 5,55"
+                  fill="#0a2a3a"
+                />
+              </svg>
               <svg
                 class="hex-bg"
                 viewBox="0 0 200 230"
@@ -114,7 +135,7 @@
                   points="100,5 195,55 195,175 100,225 5,175 5,55"
                   fill="none"
                   stroke="#00d4ff"
-                  stroke-width="3"
+                  stroke-width="3.5"
                   stroke-linejoin="round"
                 />
               </svg>
@@ -124,8 +145,6 @@
               />
             </div>
           </div>
-
-          <!-- content: heading from top · text from bottom · button from right -->
           <div class="about-content">
             <h2 class="reveal-top">About <span>Me</span></h2>
             <h3 class="reveal-top delay-1">Frontend Developer!</h3>
@@ -217,7 +236,11 @@
             <textarea placeholder="Your Message"></textarea>
           </div>
           <div class="form-submit">
-            <button class="btn btn-primary" onclick="handleContact(event)">
+            <button
+              class="btn btn-primary"
+              id="contactBtn"
+              onclick="handleContact(event)"
+            >
               Send Message
               <i class="fas fa-paper-plane" style="margin-left: 0.4rem"></i>
             </button>
@@ -260,16 +283,15 @@
           <p id="modalDesc"></p>
           <div class="modal-actions">
             <a id="modalGithub" href="#" class="btn btn-outline" target="_blank"
-              ><i class="fab fa-github"></i> GitHub</a
+              ><i class="fab fa-github"></i>&nbsp;GitHub</a
             >
             <a id="modalDemo" href="#" class="btn btn-primary" target="_blank"
-              ><i class="fas fa-external-link-alt"></i> Live Demo</a
+              ><i class="fas fa-external-link-alt"></i>&nbsp;Live Demo</a
             >
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ==================== SCRIPTS ==================== -->
   </body>
 </html>

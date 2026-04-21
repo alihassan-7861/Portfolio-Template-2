@@ -1,3 +1,5 @@
+
+    
       /* =============================================
        DATA — single source of truth
     ============================================= */
@@ -105,18 +107,24 @@
             <h3>${p.title}</h3>
             <p>${p.category}</p>
             <div class="project-icons">
-              <a href="${p.github}" target="_blank" aria-label="GitHub"
-                 onclick="event.stopPropagation()">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="${p.demo}" target="_blank" aria-label="Live Demo"
-                 onclick="event.stopPropagation()">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <button aria-label="Details"
-                      onclick="event.stopPropagation(); openModal(${i})">
-                <i class="fas fa-expand"></i>
-              </button>
+              <div class="icon-wrap">
+                <a href="${p.github}" target="_blank" aria-label="GitHub" onclick="event.stopPropagation()">
+                  <i class="fab fa-github"></i>
+                </a>
+                <span class="icon-tip">GitHub</span>
+              </div>
+              <div class="icon-wrap">
+                <a href="${p.demo}" target="_blank" aria-label="Live Demo" onclick="event.stopPropagation()">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <span class="icon-tip">Live Demo</span>
+              </div>
+              <div class="icon-wrap">
+                <button aria-label="View Details" onclick="event.stopPropagation();openModal(${i})">
+                  <i class="fas fa-expand"></i>
+                </button>
+                <span class="icon-tip">View Details</span>
+              </div>
             </div>
           </div>`;
           grid.appendChild(card);
@@ -161,7 +169,7 @@
     ============================================= */
       function handleContact(e) {
         e.preventDefault();
-        const btn = e.currentTarget;
+        const btn = document.getElementById("contactBtn");
         btn.textContent = "Message Sent! ✓";
         btn.style.background = "#00c896";
         setTimeout(() => {
@@ -180,13 +188,7 @@
           const p = document.createElement("div");
           p.className = "particle";
           const size = Math.random() * 4 + 2;
-          p.style.cssText = `
-          width:${size}px; height:${size}px;
-          left:${Math.random() * 100}%;
-          bottom:${Math.random() * 20}%;
-          animation-duration:${6 + Math.random() * 10}s;
-          animation-delay:${Math.random() * 8}s;
-        `;
+          p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random() * 100}%;bottom:${Math.random() * 20}%;animation-duration:${6 + Math.random() * 10}s;animation-delay:${Math.random() * 8}s;`;
           container.appendChild(p);
         }
       })();
@@ -203,10 +205,9 @@
           },
           { threshold: 0.18, rootMargin: "0px 0px -60px 0px" },
         );
-
         document
           .querySelectorAll(
-            ".reveal-top, .reveal-bottom, .reveal-left, .reveal-right, .stagger",
+            ".reveal-top,.reveal-bottom,.reveal-left,.reveal-right,.stagger",
           )
           .forEach((el) => obs.observe(el));
       })();
@@ -218,7 +219,6 @@
         const nav = document.getElementById("navbar");
         const links = document.querySelectorAll(".nav-links a");
         const sections = document.querySelectorAll("section[id]");
-
         function onScroll() {
           nav.classList.toggle("scrolled", window.scrollY > 50);
           document
@@ -228,12 +228,12 @@
           sections.forEach((s) => {
             if (window.scrollY >= s.offsetTop - 120) current = s.id;
           });
-          links.forEach((a) => {
+          links.forEach((a) =>
             a.classList.toggle(
               "active",
-              a.getAttribute("href") === `#${current}`,
-            );
-          });
+              a.getAttribute("href") === "#" + current,
+            ),
+          );
         }
         window.addEventListener("scroll", onScroll, { passive: true });
       })();
@@ -248,10 +248,11 @@
           btn.classList.toggle("open");
           links.classList.toggle("open");
         });
-        links.querySelectorAll("a").forEach((a) => {
+        links.querySelectorAll("a").forEach((a) =>
           a.addEventListener("click", () => {
             btn.classList.remove("open");
             links.classList.remove("open");
-          });
-        });
+          }),
+        );
       })();
+    
